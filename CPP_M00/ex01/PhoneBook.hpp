@@ -24,7 +24,8 @@ class  PhoneBook{
     PhoneBook(void);
     ~PhoneBook(void);
     //accesseurs
-    int     get_count(void);
+    int     get_count(void) const;
+    void    set_count(int count);
     void    add_contact(void);
     void    search_contact(void);
 };

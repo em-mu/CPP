@@ -22,9 +22,15 @@ PhoneBook::~PhoneBook( void )
 	return;
 }
 
-int PhoneBook::get_count( void )
+int PhoneBook::get_count( void ) const
 {
     return (this->_count);
+}
+
+void PhoneBook::set_count( int count )
+{
+    this->_count = count;
+    return;
 }
 
 void PhoneBook::add_contact( void )
@@ -49,7 +55,7 @@ void PhoneBook::search_contact( void )
         
     std::string input;
     std::cout << "|----------|----------|----------|----------|" << std::endl;
-	std::cout << "Please, enter index number or press 0 to exit : ";
+	std::cout << "Please, enter index number or press 0 to return : ";
     
 	int index = 0;
     if (std::getline(std::cin, input))
@@ -60,7 +66,7 @@ void PhoneBook::search_contact( void )
         }
         catch(const std::exception& e)
         {
-            std::cerr << "\033[1;31;5;221mError: "<< e.what() << "\033[0m" << std::endl;
+            std::cerr << "\033[1;31;5;221mError: Invalid Index\033[0m" << std::endl;
             return ;
         }
         if (index == 0)

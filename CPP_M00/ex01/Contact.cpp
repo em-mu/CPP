@@ -66,10 +66,34 @@ void Contact::set_new_contact( int i )
             break;
         }
     }
-    std::cout << "Last Name: ";
-    std::getline(std::cin, this->_last_name);
-    std::cout << "Nickname: ";
-    std::getline(std::cin, this->_nickname);
+    while (1)
+    {
+        std::cout << "Last Name: ";
+        std::getline(std::cin, buff);
+        if (buff.find('\t') != std::string::npos || buff.find('^') != std::string::npos || buff.find('[') != std::string::npos || buff.length() <= 0 || buff.length() > 50)
+        {
+            std::cout << "Please, try again." << std::endl;
+        }
+        else
+        {
+            this->_last_name = buff;
+            break;
+        }
+    }
+    while (1)
+    {
+        std::cout << "Nickname: ";
+        std::getline(std::cin, buff);
+        if (buff.find('\t') != std::string::npos || buff.find('^') != std::string::npos || buff.find('[') != std::string::npos || buff.length() <= 0 || buff.length() > 50)
+        {
+            std::cout << "Please, try again." << std::endl;
+        }
+        else
+        {
+            this->_nickname = buff;
+            break;
+        }
+    }
     std::cout << "Phone Number: ";
     std::getline(std::cin, this->_phone_number);
     std::cout << "Darkest Secret: ";
@@ -95,7 +119,7 @@ void Contact::display_header( void ) const
         std::cout << this->_nickname.substr(0, 9) << ".";
     else
         std::cout << std::setw(10) << this->_nickname;
-	std::cout << "|" << std::endl;
+    std::cout << "|" << std::endl;
 }
 
 void Contact::display_contact( void ) const
