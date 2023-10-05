@@ -1,29 +1,15 @@
 # include "Zombie.hpp"
 
-// int main()
-// {
-//     Zombie  zozo("zo");
-//     zozo.announce();
-    
-//     Zombie  *z("yo");
-//     z->newZombie("foo");
-
-//     Zombie  zoo("test");
-//     zoo.randomChump("grr");
-
-//     return 0;
-// }
-
-int main(void)
+int	main(void)
 {
+    Zombie  zozo("zo"); // Zo is on the heap
+    zozo.announce();
 
-	Zombie *Zombie_on_heap;
+	Zombie *zombie = newZombie("Zombie"); // foo is allocated on the stack with new
+    zombie->announce();
+	delete zombie;
 
-	Zombie_on_heap = NULL;
-	Zombie_on_heap = Zombie_on_heap->newZombie("John Doe");
-	Zombie_on_heap->announce();
-	Zombie_on_heap->randomChump("Chuck Norris");
-	Zombie_on_heap->randomChump("Chuck Kekss");
-	delete Zombie_on_heap;
-	return (0);
+	randomChump("ZoZo"); // ZoZo is on the heap
+
+	return 0;
 }

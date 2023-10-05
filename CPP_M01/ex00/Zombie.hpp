@@ -23,11 +23,12 @@ class Zombie {
         std::string		_name;
 
     public:
-        Zombie( std::string name );
+        Zombie(std::string name);
         ~Zombie( void );
         void    announce( void ) const;
-        Zombie* newZombie( std::string name );
-        void    randomChump( std::string name );
 };
+
+Zombie* newZombie( std::string name );
+void    randomChump( std::string name );
 
 #endif
