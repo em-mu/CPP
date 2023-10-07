@@ -6,17 +6,17 @@
 #    By: emuller <emuller@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/30 15:42:07 by emuller           #+#    #+#              #
-#    Updated: 2023/10/07 17:27:01 by emuller          ###   ########.fr        #
+#    Updated: 2023/10/07 17:28:12 by emuller          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Contact.cpp PhoneBook.cpp
+SRC = megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = phonebook
+NAME = megaphone
 
 all: $(NAME)
 

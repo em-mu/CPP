@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 13:54:33 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/01 17:44:43 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/07 17:25:08 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,11 @@ void Contact::set_new_contact( int i )
     while (1)
     {
         std::cout << "First Name: ";
-        std::getline(std::cin, buff);
+        if(!std::getline(std::cin, buff))
+        {
+            std::cout << "\nsalut bande de nazes" << std::endl;
+            return ;
+        }
         if (buff.find('\t') != std::string::npos || buff.find('^') != std::string::npos || buff.find('[') != std::string::npos || buff.length() <= 0 || buff.length() > 50)
         {
             std::cout << "Please, try again." << std::endl;

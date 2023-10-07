@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 15:42:32 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/01 15:04:23 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/07 17:26:02 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ int main()
     {
         std::cout << ">>";
         if(!std::getline(std::cin, input))
+        {
+            std::cout << "\nsalut bande de nazes" << std::endl;
             break;
+        }
         if (input.compare("EXIT") == 0)
 			break;
         if (input != "" && input != "ADD" && input != "SEARCH")
