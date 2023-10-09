@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: emuller <emuller@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/30 15:42:07 by emuller           #+#    #+#              #
-#    Updated: 2023/10/01 14:03:26 by emuller          ###   ########.fr        #
+#    Created: 2023/10/09 17:15:26 by emuller           #+#    #+#              #
+#    Updated: 2023/10/09 17:16:59 by emuller          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = 
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++11
 
-NAME = phonebook
+NAME = zombie_horde
 
 all: $(NAME)
 
