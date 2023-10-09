@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: emuller <emuller@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/09 17:26:12 by emuller           #+#    #+#              #
-#    Updated: 2023/10/09 20:05:21 by emuller          ###   ########.fr        #
+#    Created: 2023/10/09 20:06:29 by emuller           #+#    #+#              #
+#    Updated: 2023/10/09 20:06:39 by emuller          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ CXX = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = brain
-
+NAME = sed
 all: $(NAME)
 
 $(NAME): $(OBJ)
