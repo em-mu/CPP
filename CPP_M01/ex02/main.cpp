@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 16:58:33 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/09 16:58:34 by emuller          ###   ########.fr       */
+/*   Created: 2023/10/09 17:26:56 by emuller           #+#    #+#             */
+/*   Updated: 2023/10/09 17:31:06 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Zombie.hpp"
+#include <iostream>
 
-Zombie::Zombie(std::string name) : _name(name)
+int main()
 {
-	// this->_name = name;
-	std::cout << "Zombie " << this->_name << " created" << std::endl;
-    return;
-}
+    std::string emmaMa = "HI THIS IS BRAIN";
+    std::string *stringPTR = &emmaMa;
+    std::string &stringREF = emmaMa;
 
-Zombie::~Zombie()
-{
-	std::cout << "Zombie " << this->_name << " destroyed" << std::endl;
-    return;
-}
+    std::cout << &emmaMa << std::endl;
+    std::cout << stringPTR << std::endl;
+    std::cout << &stringREF << std::endl;
 
-void    Zombie::announce( void ) const
-{
-    std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-    return;
+    std::cout << emmaMa << std::endl;
+    std::cout << *stringPTR << std::endl;
+    std::cout << stringREF << std::endl;
 }

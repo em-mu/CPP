@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: emuller <emuller@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/30 15:42:07 by emuller           #+#    #+#              #
-#    Updated: 2023/10/09 17:15:54 by emuller          ###   ########.fr        #
+#    Created: 2023/10/09 17:26:12 by emuller           #+#    #+#              #
+#    Updated: 2023/10/09 17:26:50 by emuller          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++11
 
-NAME = zombie
+NAME = brain
 
 all: $(NAME)
 
