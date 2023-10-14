@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:58:17 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/09 16:58:18 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/14 16:38:01 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,4 @@ int	main(void)
 	randomChump("ZoZo"); // ZoZo is on the heap
 
 	return 0;
-}h
+}
