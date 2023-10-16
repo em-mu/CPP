@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:38:22 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/09 19:26:20 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/16 16:46:15 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class   HumanB {
         HumanB( std::string name );
         ~HumanB( void );
         void    setWeapon( Weapon &w );
+        void    removeWeapon( void );
         void    attack( void ) const;
 
 };
