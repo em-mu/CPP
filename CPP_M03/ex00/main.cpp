@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/19 13:28:51 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/21 16:43:20 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,16 @@
 
 int main()
 {
+    ClapTrap yoyo("yoyo");
+    ClapTrap test;
+
+    for (int i = 0; i < 12; i++)
+        yoyo.attack("l'asticot");
+
+    test.beRepaired(15);
+    test.takeDamage(10);
+    test.takeDamage(20);
+    test.attack("argh");
+    test.beRepaired(3);
     return 0;
 }
