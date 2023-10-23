@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:47 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 11:39:43 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/23 12:59:29 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 ClapTrap::ClapTrap() :  _hit_points(10) , _energy_points(10), _attack_damage(0)
 {
     this->_name = "default name";
-    std::cout << this->_name << " created." << std::endl;
+    std::cout << "ClapTrap " << this->_name << " created." << std::endl;
     return; 
 }
 
-ClapTrap::ClapTrap(std::string name) : _hit_points(10) , _energy_points(10), _attack_damage(0)
+ClapTrap::ClapTrap(std::string name, int hit, int energy, int attack) : _hit_points(hit) , _energy_points(energy), _attack_damage(attack)
 {
     this->_name = name;
-    std::cout << this->_name << " created." << std::endl;
+    std::cout << "ClapTrap " << this->_name << " created." << std::endl;
     return; 
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << this->_name << " destroyed." << std::endl;
+    std::cout << "ClapTrap " << this->_name << " destroyed." << std::endl;
 }
 
 std::string ClapTrap::get_name( void ) const 
@@ -50,6 +50,12 @@ int ClapTrap::get_attack_damage( void ) const
 {
     return (this->_attack_damage);
 }
+
+void    ClapTrap::set_energy_points( int i )
+{
+    this->_energy_points = i;
+}
+
 
 void    ClapTrap::attack(const std::string& target)
 {

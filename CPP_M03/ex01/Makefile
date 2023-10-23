@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: emuller <emuller@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/14 14:32:49 by emuller           #+#    #+#              #
-#    Updated: 2023/10/18 15:39:26 by emuller          ###   ########.fr        #
+#    Created: 2023/10/19 13:22:33 by emuller           #+#    #+#              #
+#    Updated: 2023/10/21 17:13:29 by emuller          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Fixed.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ex02
+NAME = ex01
 
 all: $(NAME)
 
