@@ -6,24 +6,31 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:47 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 11:39:43 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/23 13:42:51 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
-ClapTrap::ClapTrap() :  _hit_points(10) , _energy_points(10), _attack_damage(0)
-{
-    this->_name = "default name";
-    std::cout << this->_name << " created." << std::endl;
-    return; 
-}
 
 ClapTrap::ClapTrap(std::string name) : _hit_points(10) , _energy_points(10), _attack_damage(0)
 {
     this->_name = name;
     std::cout << this->_name << " created." << std::endl;
     return; 
+}
+
+ClapTrap::ClapTrap( ClapTrap const & copy )
+{
+    *this = copy;
+}
+
+ClapTrap& ClapTrap::operator=(ClapTrap const & rhs)
+{
+    this->_name = rhs.get_name();
+    this->_hit_points = rhs.get_hit_points();
+    this->_energy_points = rhs.get_energy_points();
+    this->_attack_damage = rhs.get_attack_damage();
+    return (*this);
 }
 
 ClapTrap::~ClapTrap()

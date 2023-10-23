@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/21 16:43:20 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/23 13:42:23 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
     ClapTrap yoyo("yoyo");
-    ClapTrap test;
+    ClapTrap test("titi");
 
     for (int i = 0; i < 12; i++)
         yoyo.attack("l'asticot");

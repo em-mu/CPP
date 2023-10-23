@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:05:11 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 13:29:42 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/23 13:32:06 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void    FragTrap::highFivesGuys(void)
         return;
     }
     set_energy_points(get_energy_points() - 1);
-    std::cout << "Fragtrap Give me a high five! 🖐️" << std::endl;
+    std::cout << "FragTrap Give me a high five! 🖐️" << std::endl;
 }
