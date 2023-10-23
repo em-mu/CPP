@@ -6,13 +6,19 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:05:11 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 13:32:06 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/23 15:29:50 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name): ClapTrap(name, 100, 100, 30)
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
+{
+    std::cout << "FragTrap " << get_name() << " created." << std::endl;
+    return;
+}
+
+FragTrap::FragTrap() : ClapTrap("Default name", 100, 100, 30)
 {
     std::cout << "FragTrap " << get_name() << " created." << std::endl;
     return;

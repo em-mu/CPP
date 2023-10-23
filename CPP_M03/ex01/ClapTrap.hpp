@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:43 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 13:43:45 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/23 15:03:19 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class ClapTrap {
     int         _attack_damage;
     
   public:
+    ClapTrap();
     ClapTrap(std::string name, int hit_point, int energy_point, int attack_damage);
     ClapTrap( ClapTrap const & copy );
     ClapTrap& operator=(ClapTrap const & rhs);

@@ -6,13 +6,19 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 17:14:38 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 13:29:35 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/23 15:26:20 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name, 100, 50, 20)
+{
+    std::cout << "ScavTrap " << get_name() << " created." << std::endl;
+    return;
+}
+
+ScavTrap::ScavTrap( void ): ClapTrap("Default name", 100, 50, 20)
 {
     std::cout << "ScavTrap " << get_name() << " created." << std::endl;
     return;

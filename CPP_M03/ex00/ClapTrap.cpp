@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:47 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 13:42:51 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/23 15:22:57 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 ClapTrap::ClapTrap(std::string name) : _hit_points(10) , _energy_points(10), _attack_damage(0)
 {
     this->_name = name;
+    std::cout << this->_name << " created." << std::endl;
+    return; 
+}
+
+ClapTrap::ClapTrap( void ) : _hit_points(10) , _energy_points(10), _attack_damage(0)
+{
+    this->_name = "Default name";
     std::cout << this->_name << " created." << std::endl;
     return; 
 }

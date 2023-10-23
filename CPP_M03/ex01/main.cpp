@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 12:57:02 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/23 15:21:56 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,14 @@ int main()
 {
     ClapTrap yoyo("yoyo", 10 , 10 , 0);
     ScavTrap zouzou("zouzou");
+    ScavTrap zou;
     std::cout << std::endl;
     
+    zou=zouzou;
+    std::cout << zou.get_name() << std::endl;
+    zou.guardGate();
+    std::cout << std::endl;
+
     for (int i = 0; i < 3; i++)
         yoyo.attack("l'asticot");
     std::cout << std::endl;
