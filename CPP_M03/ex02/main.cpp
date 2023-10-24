@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:22:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 13:23:23 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/24 13:58:06 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int main()
 {
-    ClapTrap yoyo("yoyo", 10 , 10 , 0);
+    ClapTrap yoyo("yoyo");
     ScavTrap zouzou("zouzou");
     FragTrap grr("grr");
     std::cout << std::endl;
