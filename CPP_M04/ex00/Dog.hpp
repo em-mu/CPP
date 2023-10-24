@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:48:55 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 17:28:21 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/24 15:40:38 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog : public Animal
         ~Dog();
         Dog( Dog const & copy );
         Dog& operator=(Dog const & rhs);
-        void    makeSound();
+        void    makeSound() const;
 };
 
 #endif

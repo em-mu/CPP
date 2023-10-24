@@ -6,11 +6,12 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:41:23 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 17:42:03 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/24 15:53:20 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Cat.hpp"
 
 Cat::Cat()
 {
@@ -31,13 +32,13 @@ Cat::Cat( Cat const & copy )
     return;
 }
 
-Cat::Cat& operator=(Cat const & rhs)
+Cat& Cat::operator=(Cat const & rhs)
 {
-    this->type = rhs.get_type();
+    this->type = rhs.type;
     return (*this);
 }
 
-void    Cat::makeSound()
+void    Cat::makeSound() const
 {
     std::cout << "miaou" << std::endl;
     return;

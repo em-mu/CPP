@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:35:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/23 17:36:24 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/24 15:38:01 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-    type = "Animal";
+    this->type = "Animal";
     std::cout << "Animal created." << std::endl;
     return;
 }
@@ -31,18 +31,18 @@ Animal::Animal( Animal const & copy )
     return;
 }
 
-Animal::Animal& operator=(Animal const & rhs)
+Animal& Animal::operator=(Animal const & rhs)
 {
-    this->type = rhs.get_type();
+    this->type = rhs.type;
     return (*this);
 }
 
-void    Animal::makeSound()
+void    Animal::makeSound() const
 {
     std::cout << "No sound" << std::endl;
 }
 
-std::string Animal::getType()
+std::string Animal::getType() const
 {
     return (this->type);
 }
