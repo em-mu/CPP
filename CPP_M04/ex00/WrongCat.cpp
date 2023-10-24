@@ -1,48 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 16:35:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/24 16:28:53 by emuller          ###   ########.fr       */
+/*   Created: 2023/10/24 16:02:07 by emuller           #+#    #+#             */
+/*   Updated: 2023/10/24 16:27:32 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongCat.hpp"
 
-Animal::Animal()
+WrongCat::WrongCat()
 {
-    this->type = "Animal";
-    std::cout << "Animal created." << std::endl;
+    this->type = "WrongCat";
+    std::cout << "WrongCat created." << std::endl;
     return;
 }
 
-Animal::~Animal()
+WrongCat::~WrongCat()
 {
-    std::cout << "Animal destroyed." << std::endl;
+    std::cout << "WrongCat destroyed." << std::endl;
     return;
 }
 
-Animal::Animal( Animal const & copy )
+WrongCat::WrongCat( WrongCat const & copy )
 {
     *this = copy;
     return;
 }
 
-Animal& Animal::operator=(Animal const & rhs)
+WrongCat& WrongCat::operator=(WrongCat const & rhs)
 {
     this->type = rhs.type;
     return (*this);
 }
 
-void    Animal::makeSound() const
+void    WrongCat::makeSound() const
 {
-    std::cout << "generic sound" << std::endl;
-}
-
-std::string Animal::getType() const
-{
-    return (this->type);
+    std::cout << "wrong miaou" << std::endl;
+    return;
 }

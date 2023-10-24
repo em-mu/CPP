@@ -6,11 +6,10 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:41:23 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/24 15:53:20 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/24 16:08:14 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
 #include "Cat.hpp"
 
 Cat::Cat()
