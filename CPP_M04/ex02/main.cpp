@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 15:34:59 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/25 17:06:40 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/25 17:18:11 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main()
 {
     const AAnimal* j = new Dog();
     const AAnimal* i = new Cat();
+    // const AAnimal* meta = new AAnimal();
 
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
