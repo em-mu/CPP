@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:41:01 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/25 14:23:56 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/25 14:55:59 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Dog::~Dog()
     return;
 }
 
-Dog::Dog( Dog const & copy )
+Dog::Dog( Dog const & copy ) : _brain(new Brain(*(copy._brain)))
 {
     *this = copy;
     return;

@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:06:09 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/25 13:58:29 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/25 14:48:43 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,15 @@ Brain& Brain::operator=(Brain const & rhs)
         this->_ideas[i] = rhs._ideas[i];
     std::cout << "Brain assignment operator called" << std::endl;
     return(*this);
+}
+
+std::string Brain::getIdea(int i)
+{
+    return(this->_ideas[i]);
+}
+
+void    Brain::setIdea(int i, std::string idea)
+{
+    this->_ideas[i] = idea;
+    return;
 }
