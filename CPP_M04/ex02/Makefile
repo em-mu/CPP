@@ -6,7 +6,7 @@
 #    By: emuller <emuller@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 15:35:02 by emuller           #+#    #+#              #
-#    Updated: 2023/10/25 16:29:05 by emuller          ###   ########.fr        #
+#    Updated: 2023/10/25 16:29:01 by emuller          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXX = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ex01
+NAME = ex02
 
 all: $(NAME)
 
