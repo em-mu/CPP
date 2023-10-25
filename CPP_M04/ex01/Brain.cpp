@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:06:09 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/25 14:48:43 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/25 16:18:08 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ Brain::Brain()
 {
     for(int i = 0; i < 100; i++)
         this->_ideas[i] = "Default idea";
-    std::cout << "Brain created." << std::endl;
+    std::cout << "\e[32mBrain created.\033[0m" << std::endl;
     return;
 }
 
 Brain::~Brain()
 {
-    std::cout << "Brain destroyed." << std::endl;
+    std::cout << "\e[31mBrain destroyed.\033[0m" << std::endl;
     return;
 }
 

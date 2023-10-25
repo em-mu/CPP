@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:35:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/24 16:28:53 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/25 16:18:12 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 Animal::Animal()
 {
     this->type = "Animal";
-    std::cout << "Animal created." << std::endl;
+    std::cout << "\e[32mAnimal created.\033[0m" << std::endl;
     return;
 }
 
 Animal::~Animal()
 {
-    std::cout << "Animal destroyed." << std::endl;
+    std::cout << "\e[31mAnimal destroyed.\033[0m" << std::endl;
     return;
 }
 
