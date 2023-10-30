@@ -1,30 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 17:25:38 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/30 16:59:30 by emuller          ###   ########.fr       */
+/*   Created: 2023/10/30 17:49:03 by emuller           #+#    #+#             */
+/*   Updated: 2023/10/30 17:49:19 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_H
-# define ICE_H
-
-# include <iostream>
-# include "AMateria.hpp"
-
-class Ice : public AMateria
-{
-    public:
-        Ice();
-        ~Ice();
-        Ice( Ice const & copy );
-        Ice& operator=(Ice const & rhs);
-        AMateria* clone() const;
-        void use(ICharacter& target);
-};
-
-#endif
+#include "MateriaSource.hpp"
