@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:07:47 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/30 17:45:51 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/30 18:15:04 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,32 @@ Character::Character(std::string const name) : _name(name)
     return;
 }
 
-Character::~Character(){}
- //free Materia
+Character::~Character()
+{
+    for (int i = 0; i < 4; i++)
+    {
+        if (_inventory[i])
+            delete _inventory[i];
+    }
+}
  
-Character::Character( Character const & copy ){}
- //deepcopy
+Character::Character( Character const & copy )
+{
+    _name = copy._name;
+    for (int i = 0; i < 4; i++)
+        _inventory[i] = copy._inventory[i];
+    return;
+}
  
-Character& Character::operator=(Character const & rhs){}
- //deepcopy
+Character& Character::operator=(Character const & rhs)
+{
+    if (this == &rhs) 
+        return *this;
+    _name = rhs._name;
+    for (int i = 0; i < 4; i++)
+        _inventory[i] = rhs._inventory[i];
+    return *this;
+}
 
 std::string const & Character::getName() const 
 {
@@ -62,7 +80,10 @@ void Character::equip(AMateria* m)
     }
 }
 
-void Character::unequip(int idx){}
+void Character::unequip(int idx)
+{
+    (void)idx;
+}
  //don't delete materia / avoid leaks
  
 void Character::use(int idx, ICharacter& target)

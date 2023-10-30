@@ -6,11 +6,11 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:25:29 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/30 17:00:03 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/30 18:15:22 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <Cure.hpp>
+#include "Cure.hpp"
 
 Cure::Cure(){}
 
