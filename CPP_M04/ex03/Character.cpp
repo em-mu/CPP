@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:07:47 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/31 12:35:38 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/31 13:55:10 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,10 @@ std::string const & Character::getName() const
 void Character::equip(AMateria* m)
 {
     if (!m)
+    {
+        std::cout << "Error: materia does not exist. " << std::endl;
         return;
+    }
     int i = 0;
     while (_inventory[i])
         i++;

@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:49:03 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/31 12:10:10 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/31 13:50:41 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,13 @@ void MateriaSource::learnMateria(AMateria* m)
         if(!this->_memory[i])
         {
             this->_memory[i] = m;
+            std::cout << m->getType() << " learned." << std::endl;
             break;
         }
         else if (i == 3)
         {
+            std::cout << "Memory full: cannot learn " << m->getType() << "." << std::endl;
             delete m;
-            std::cout << "Memory full" << std::endl;
         }
     }
 }
@@ -74,7 +75,12 @@ AMateria* MateriaSource::createMateria(std::string const & type)
         return 0;
     }
     for (int i = 0 ; i < 4 ; i++)
+    {
         if (type == this->_memory[i]->getType())
+        {
+            std::cout << type << " created." << std::endl;
             return (this->_memory[i]->clone());
+        }
+    }
     return 0;
 }
