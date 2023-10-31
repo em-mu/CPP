@@ -6,13 +6,13 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:25:23 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/31 12:33:27 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/31 12:40:34 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria() : _type(0){}
+AMateria::AMateria() : _type("default"){}
 
 AMateria::AMateria(std::string const & type): _type(type){}
 
