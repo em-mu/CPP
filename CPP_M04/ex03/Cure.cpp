@@ -6,13 +6,16 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:25:29 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/30 18:15:22 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/31 12:15:01 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(){}
+Cure::Cure()
+{
+    _type = "cure";
+}
 
 Cure::~Cure(){}
 
@@ -29,7 +32,7 @@ Cure& Cure::operator=(Cure const & rhs)
 
 AMateria* Cure::clone() const
 {
-    return (new Cure());
+    return (new Cure(*this));
 }
 
 void Cure::use(ICharacter& target)

@@ -6,13 +6,16 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:25:35 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/30 18:15:36 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/31 12:15:00 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice(){}
+Ice::Ice()
+{
+    _type = "ice";
+}
 
 Ice::~Ice(){}
 
@@ -29,7 +32,7 @@ Ice& Ice::operator=(Ice const & rhs)
 
 AMateria* Ice::clone() const
 {
-    return (new Ice());
+    return (new Ice(*this));
 }
 
 void Ice::use(ICharacter& target)

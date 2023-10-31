@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:07:29 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/30 17:22:29 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/31 12:36:16 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ class Character : public ICharacter
     public:
         Character();
         Character(std::string const name);
-        ~Character(); //free Materia
-        Character( Character const & copy ); //deepcopy
-        Character& operator=(Character const & rhs); //deepcopy
+        ~Character();
+        Character( Character const & copy ); 
+        Character& operator=(Character const & rhs);
 
         std::string const & getName() const;
         void equip(AMateria* m);
-        void unequip(int idx); //don't delete materia / avoid leaks
+        void unequip(int idx);
         void use(int idx, ICharacter& target);
 };
 

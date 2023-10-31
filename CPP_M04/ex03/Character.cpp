@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:07:47 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/30 18:15:04 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/31 12:35:38 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,11 @@ void Character::equip(AMateria* m)
     if (!m)
         return;
     int i = 0;
-    while (_inventory[i]) //a verifier
+    while (_inventory[i])
         i++;
     if (i >= 4)
     {
-        std::cout << "Inventory full" << std::endl;
+        std::cout << "Error: Inventory full." << std::endl;
         return;
     }
     for (i = 0; i < 4; i++)
@@ -75,6 +75,7 @@ void Character::equip(AMateria* m)
         if (!_inventory[i])
         {
             _inventory[i] = m;
+            std::cout << _name << " : equiped " << _inventory[i]->getType() << " at the slot " << i << "." << std::endl;
             break;
         }
     }
@@ -82,11 +83,21 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-    (void)idx;
+    if (idx < 0 || idx >= 4)
+    {
+        std::cout << "Error: invalid index." << std::endl;
+        return;
+    }
+    std::cout << _name << " : unequiped " << _inventory[idx]->getType() << " at the slot " << idx << "." << std::endl;
+    _inventory[idx] = 0;
 }
- //don't delete materia / avoid leaks
  
 void Character::use(int idx, ICharacter& target)
 {
-    _inventory[idx]->use(target);
+    if (idx < 0 || idx >= 4)
+        std::cout << "Error: invalid index." << std::endl;
+    else if (_inventory[idx])
+        _inventory[idx]->use(target);
+    else
+        std::cout << _name << " : cannot use an empty slot." << std::endl;
 }

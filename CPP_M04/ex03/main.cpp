@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:27:08 by emuller           #+#    #+#             */
-/*   Updated: 2023/10/30 17:55:39 by emuller          ###   ########.fr       */
+/*   Updated: 2023/10/31 12:32:00 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ int main()
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
+    src->learnMateria(new Ice());
+    src->learnMateria(new Ice());
+    src->learnMateria(new Ice());
+    src->learnMateria(new Ice());
     
     ICharacter* me = new Character("me");
     
@@ -32,6 +36,8 @@ int main()
     
     ICharacter* bob = new Character("bob");
     
+    me->use(0, *bob);
+    me->unequip(0);
     me->use(0, *bob);
     me->use(1, *bob);
 
