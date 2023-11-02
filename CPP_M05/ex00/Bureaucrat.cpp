@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:36:57 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/02 16:25:10 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/02 17:05:52 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,21 @@
 
 Bureaucrat::Bureaucrat() : _name("Default name") , _grade(1) {}
 
-Bureaucrat::Bureaucrat(std::string const name, int grade): _name(name) , _grade(grade) 
+Bureaucrat::Bureaucrat(std::string const name, int grade): _name(name)
 {
-    if(grade < 1)
-        throw GradeTooHighException();
-    if(grade > 150)
-        throw GradeTooLowException();
+    try
+    {
+        if(grade < 1)
+            throw GradeTooHighException();
+        if(grade > 150)
+            throw GradeTooLowException();
+        else
+            _grade = grade;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
 }
 
 Bureaucrat::~Bureaucrat(){}
@@ -103,6 +112,6 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 
 std::ostream& operator<<(std::ostream &str, Bureaucrat const & ref)
 {
-    str << ref.getName() << ", buraucrat grade " << ref.getGrade() << "." << std::endl;
+    str << ref.getName() << ", bureaucrat grade " << ref.getGrade() << "." << std::endl;
     return(str);
 }
