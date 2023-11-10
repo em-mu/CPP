@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:36:16 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/02 17:04:36 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/10 16:56:19 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int main()
     
     std::cout << chacha << std::endl;
     chacha.increaseGrade();
-    yoyo.increaseGrade();
+    yoyo.decreaseGrade();
+    yoyo.decreaseGrade();
     std::cout << chacha << std::endl;
     std::cout << yoyo << std::endl;
     chacha.increaseGrade();
