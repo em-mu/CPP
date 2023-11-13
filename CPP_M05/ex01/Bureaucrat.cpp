@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:36:57 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/10 16:54:46 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/13 20:15:24 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,14 @@ Bureaucrat::Bureaucrat(std::string const name, int grade): _name(name)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << ": bureaucrate has grade " << _grade << std::endl;
+        std::cerr << e.what() << ": bureaucrate created with grade " << _grade << std::endl;
     }
 }
 
-Bureaucrat::~Bureaucrat(){}
+Bureaucrat::~Bureaucrat()
+{
+    std::cout << _name << "died." << std::endl;
+}
 
 Bureaucrat::Bureaucrat(const Bureaucrat& copy) : _name(copy._name), _grade(copy._grade) {}
 

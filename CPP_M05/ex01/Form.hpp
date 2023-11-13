@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:21:37 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/13 18:53:15 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/13 20:03:50 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ class Form
         ~Form();
         Form( Form const & copy ); 
         Form& operator=(Form const & rhs);
-        std::string get_name() const;
-        bool        get_status() const;
-        int         get_grade_to_sign() const;
-        int         get_grade_to_execute() const;
+        std::string getName() const;
+        bool        getStatus() const;
+        int         getGradeToSign() const;
+        int         getGradeToExecute() const;
         void        beSigned(Bureaucrat bubu);
 };
 
