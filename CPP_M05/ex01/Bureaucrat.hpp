@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:03:46 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/13 18:56:12 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/15 16:28:39 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 # include <stdexcept>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat 
 {
@@ -45,7 +48,7 @@ class Bureaucrat
         void        setGrade(int new_grade);
         void        increaseGrade();
         void        decreaseGrade();
-        void        signForm(); // appel beSigned
+        void        signForm(Form& form);
 };
 
 std::ostream& operator<<(std::ostream &str, Bureaucrat const & ref);

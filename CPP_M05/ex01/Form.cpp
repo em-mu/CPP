@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:21:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/13 20:29:39 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/15 16:27:40 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,14 @@ Form::Form() : _name("Default name") , _is_signed(0) , _grade_to_sign(150), _gra
 
 Form::Form(std::string name, int grade_to_sign, int grade_to_execute) : _name(name) , _is_signed(0) , _grade_to_sign(grade_to_sign), _grade_to_execute(grade_to_execute)
 {
-    // try
-    // {
-    //     if(grade_to_sign < 1 || grade_to_execute < 1)
-    //     {
-    //         _grade = 1;
-    //         throw GradeTooHighException();
-    //     }
-    //     if(grade > 150)
-    //     {
-    //         _grade = 150;
-    //         throw GradeTooLowException();
-    //     }
-    //     else
-    //         _grade = grade;
-    // }
-    // catch(const std::exception& e)
-    // {
-    //     std::cerr << e.what() << ": bureaucrate created with grade " << _grade << std::endl;
-    // }
+    if(_grade_to_sign < 1 || grade_to_execute < 1)
+    {
+        throw GradeTooHighException();
+    }
+    if(grade_to_sign > 150 || grade_to_execute > 150)
+    {
+        throw GradeTooLowException();
+    }
 }
 
 Form::~Form()
@@ -71,7 +60,14 @@ int         Form::getGradeToExecute() const
 }
 
 void        Form::beSigned(Bureaucrat bubu)
-{}
+{
+    if(bubu.getGrade() >= _grade_to_sign)
+        throw (std::logic_error( bubu.getName() + " couldn't sign " + _name + ": because his grade is too low."));
+    else if (_is_signed == 1)
+        throw (std::logic_error("Error : Form already signed"));
+    else
+        _is_signed = 1;
+}
 
 std::ostream& operator<<(std::ostream &str, Form & ref)
 {
@@ -83,4 +79,14 @@ std::ostream& operator<<(std::ostream &str, Form & ref)
     str << "- can be signed by a Bureaucrate grade " << ref.getGradeToSign() << "or more.\n";
     str << "- can be executed by a Bureaucrate grade " << ref.getGradeToExecute() << "or more." << std::endl;;
     return(str);
+}
+
+const char* Form::GradeTooHighException::what() const throw()
+{
+    return("Error : Form : Grade too high");
+}
+
+const char* Form::GradeTooLowException::what() const throw()
+{
+    return("Error : Form : Grade too low");
 }

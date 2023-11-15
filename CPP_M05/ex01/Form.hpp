@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:21:37 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/13 20:03:50 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/15 16:14:45 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <stdexcept>
 # include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form 
 {
@@ -31,6 +33,18 @@ class Form
         ~Form();
         Form( Form const & copy ); 
         Form& operator=(Form const & rhs);
+
+        class GradeTooHighException : public std::exception
+        {
+            public:
+                const char* what() const throw();
+        };
+        class GradeTooLowException : public std::exception
+        {
+            public:
+                const char* what() const throw();
+        };
+        
         std::string getName() const;
         bool        getStatus() const;
         int         getGradeToSign() const;
@@ -40,4 +54,4 @@ class Form
 
 std::ostream& operator<<(std::ostream &str, Form & ref);
 
-#endif; 
+#endif
