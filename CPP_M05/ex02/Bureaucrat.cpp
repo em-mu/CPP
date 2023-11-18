@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:36:57 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/18 13:29:52 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/18 16:41:22 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,21 @@ void        Bureaucrat::signForm(AForm& form)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
-    
+}
+
+void        Bureaucrat::executeForm(AForm const & form)
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << _name << " executed " << form.getName() << "." << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    } 
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()

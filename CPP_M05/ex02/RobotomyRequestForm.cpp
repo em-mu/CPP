@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 12:04:22 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/18 16:20:19 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/18 17:09:54 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
         throw (std::logic_error( executor.getName() + " cannot execute " + getName() + ": because his grade is too low."));
     std::cout << "~~BRRRR~~RATATATATA~~BZZZZ~~" << std::endl;
     srand (time(NULL));
-	if (!(rand() % 2))
+	if ((rand() % 2) < 1)
 		std::cout << _target << " has been robotomized." << std::endl;
     else
         std::cout << _target << " robotomy failed." << std::endl;

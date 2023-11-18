@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:03:46 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/18 13:29:27 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/18 16:38:56 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ class Bureaucrat
         void        increaseGrade();
         void        decreaseGrade();
         void        signForm(AForm& form);
+        void        executeForm(AForm const & form);
 };
 
 std::ostream& operator<<(std::ostream &str, Bureaucrat const & ref);
