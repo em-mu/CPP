@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:21:37 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/18 13:30:54 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/18 16:00:21 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ class AForm
         int             getGradeToSign() const;
         int             getGradeToExecute() const;
         void            beSigned(Bureaucrat bubu);
+        // virtual void    validExec(Bureaucrat const & executor);        
         virtual void    execute(Bureaucrat const & executor) const = 0;
 };
 

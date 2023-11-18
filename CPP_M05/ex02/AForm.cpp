@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:21:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/18 12:13:24 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/18 16:00:27 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,15 @@ void        AForm::beSigned(Bureaucrat bubu)
     else
         _is_signed = 1;
 }
+
+// void    AForm::validExec(Bureaucrat const & executor)
+// {
+//     if (_is_signed == 0)
+//         throw (std::logic_error( getName() + " is not signed."));
+//     if (executor.getGrade() >= _grade_to_execute)
+//         throw (std::logic_error( executor.getName() + " cannot execute " + _name + ": because his grade is too low."));
+//     _execute(executor);
+// }
 
 std::ostream& operator<<(std::ostream &str, AForm & ref)
 {
