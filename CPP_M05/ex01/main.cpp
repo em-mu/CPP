@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:36:16 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/15 16:25:06 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/18 11:55:33 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ int main()
     {
         Bureaucrat  chacha("chacha", 1);
         Form        foufou("foufou", 2, 10);
+        std::cout << foufou << std::endl;
         chacha.signForm(foufou);
+        std::cout << foufou << std::endl;
+        std::cout << chacha << std::endl;
         chacha.signForm(foufou);
     }
     catch(const std::exception& e)
@@ -48,6 +51,7 @@ int main()
         Bureaucrat  chacha("chacha", 4);
         Form        foufou("foufou", 2, 10);
         std::cout << chacha << std::endl;
+        std::cout << foufou << std::endl;
         chacha.signForm(foufou);
     }
     catch(const std::exception& e)

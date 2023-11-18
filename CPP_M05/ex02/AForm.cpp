@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:21:40 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/18 11:56:09 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/18 12:13:24 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-Form::Form() : _name("Default name") , _is_signed(0) , _grade_to_sign(150), _grade_to_execute(150){}
+AForm::AForm() : _name("Default name") , _is_signed(0) , _grade_to_sign(150), _grade_to_execute(150){}
 
-Form::Form(std::string name, int grade_to_sign, int grade_to_execute) : _name(name) , _is_signed(0) , _grade_to_sign(grade_to_sign), _grade_to_execute(grade_to_execute)
+AForm::AForm(std::string name, int grade_to_sign, int grade_to_execute) : _name(name) , _is_signed(0) , _grade_to_sign(grade_to_sign), _grade_to_execute(grade_to_execute)
 {
     if(_grade_to_sign < 1 || grade_to_execute < 1)
     {
@@ -26,37 +26,37 @@ Form::Form(std::string name, int grade_to_sign, int grade_to_execute) : _name(na
     }
 }
 
-Form::~Form(){}
+AForm::~AForm(){}
 
-Form::Form( Form const & copy ) : _name(copy._name), _is_signed(copy._is_signed), _grade_to_sign(copy._grade_to_sign), _grade_to_execute(copy._grade_to_execute) {}
+AForm::AForm( AForm const & copy ) : _name(copy._name), _is_signed(copy._is_signed), _grade_to_sign(copy._grade_to_sign), _grade_to_execute(copy._grade_to_execute) {}
 
-Form& Form::operator=(Form const & rhs)
+AForm& AForm::operator=(AForm const & rhs)
 {
     (void)rhs;
     return *this;
 }
 
-std::string Form::getName() const
+std::string AForm::getName() const
 {
     return (_name);
 }
 
-bool        Form::getStatus() const
+bool        AForm::getStatus() const
 {
     return (_is_signed);
 }
 
-int         Form::getGradeToSign() const
+int         AForm::getGradeToSign() const
 {
     return (_grade_to_sign);
 }
 
-int         Form::getGradeToExecute() const
+int         AForm::getGradeToExecute() const
 {
     return (_grade_to_execute);
 }
 
-void        Form::beSigned(Bureaucrat bubu)
+void        AForm::beSigned(Bureaucrat bubu)
 {
     if(bubu.getGrade() >= _grade_to_sign)
         throw (std::logic_error( bubu.getName() + " couldn't sign " + _name + ": because his grade is too low."));
@@ -66,7 +66,7 @@ void        Form::beSigned(Bureaucrat bubu)
         _is_signed = 1;
 }
 
-std::ostream& operator<<(std::ostream &str, Form & ref)
+std::ostream& operator<<(std::ostream &str, AForm & ref)
 {
     str << "The form " << ref.getName() << ":\n";
     if (ref.getStatus() == 1)
@@ -78,12 +78,12 @@ std::ostream& operator<<(std::ostream &str, Form & ref)
     return(str);
 }
 
-const char* Form::GradeTooHighException::what() const throw()
+const char* AForm::GradeTooHighException::what() const throw()
 {
     return("Error : Form : Grade too high");
 }
 
-const char* Form::GradeTooLowException::what() const throw()
+const char* AForm::GradeTooLowException::what() const throw()
 {
     return("Error : Form : Grade too low");
 }
