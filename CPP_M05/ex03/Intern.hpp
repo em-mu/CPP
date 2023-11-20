@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:16:14 by emuller           #+#    #+#             */
-/*   Updated: 2023/11/18 17:24:20 by emuller          ###   ########.fr       */
+/*   Updated: 2023/11/20 16:30:03 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <iostream>
 # include <stdexcept>
 # include "AForm.hpp"
+# include "PresidentialPardonForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "ShrubberyCreationForm.hpp"
 
 class AForm;
 
