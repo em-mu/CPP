@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:50:00 by emuller           #+#    #+#             */
-/*   Updated: 2024/01/29 17:39:21 by emuller          ###   ########.fr       */
+/*   Updated: 2024/01/29 17:56:08 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,19 @@ void ScalarConverter::convert(const std::string str)
     std::cout << str << "  type " << type << std::endl;
 
 };
+
+void		ScalarConverter::ConvertFromChar(void)
+{};
+
+void		ScalarConverter::ConvertFromInt(void)
+{};
+
+void		ScalarConverter::ConvertFromFloat(void)
+{};
+
+void		ScalarConverter::ConvertFromDouble(void)
+{};
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

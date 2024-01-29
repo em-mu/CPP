@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:49:58 by emuller           #+#    #+#             */
-/*   Updated: 2024/01/29 17:38:10 by emuller          ###   ########.fr       */
+/*   Updated: 2024/01/29 17:54:02 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,13 @@ class ScalarConverter
         static int		theInt
         static float	theFloat;
         static double	theDouble;
+
         static int  input_type(const std::string str);
+
+        static void		ConvertFromChar(void);
+		static void		ConvertFromInt(void);
+		static void		ConvertFromFloat(void);
+		static void		ConvertFromDouble(void);
 
 		ScalarConverter(void);
 		ScalarConverter(ScalarConverter const &src);
