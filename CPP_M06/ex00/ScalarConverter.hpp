@@ -6,7 +6,7 @@
 /*   By: emuller <emuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 16:49:58 by emuller           #+#    #+#             */
-/*   Updated: 2024/01/22 16:50:08 by emuller          ###   ########.fr       */
+/*   Updated: 2024/01/29 17:38:10 by emuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,17 @@
 class ScalarConverter
 {
     private: 
-        static int input_type(const std::string str);
+        static char 	theChar;
+        static int		theInt
+        static float	theFloat;
+        static double	theDouble;
+        static int  input_type(const std::string str);
+
+		ScalarConverter(void);
+		ScalarConverter(ScalarConverter const &src);
+		ScalarConverter&	operator=(ScalarConverter const &assign);
+		~ScalarConverter(void);
+
 
     public: 
         static void convert(const std::string str);
